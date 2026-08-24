@@ -1,0 +1,39 @@
+{
+  "repository_root": "C:/c/s/private/universal/substrate/collectives/swift-universal",
+  "branch": "main",
+  "upstream": "origin/main",
+  "head": "26227d51ff13ce0a68f4023e19ecdcdcc9fabc7d",
+  "fetched_remote_tip": "26227d51ff13ce0a68f4023e19ecdcdcc9fabc7d",
+  "candidate_tree": "f0d301f1b556c9c9e1920ae06e88738fe6d3688a",
+  "tracked_paths_before": 10495,
+  "tracked_paths_after": 10489,
+  "staged_additions": 0,
+  "staged_modifications": 0,
+  "staged_renames": 0,
+  "staged_deletions": 6,
+  "deletion_percentage": 0.06,
+  "staged_paths_attachment": {
+    "encoding": "UTF-8 paths from git diff --cached --name-only --diff-filter=D, joined with LF and terminated by LF",
+    "sha256": "30c37521446ab0b7007d768e9fed497601173399b889fc747a43e35090e75c94",
+    "line_count": 6,
+    "complete_path_set": [
+      "private/universal/domain/build/toolchains/temper/.gitignore",
+      "private/universal/domain/build/toolchains/temper/Package.swift",
+      "private/universal/domain/build/toolchains/temper/Sources/TemperCommands/Temper.docc/index.md",
+      "private/universal/domain/build/toolchains/temper/Sources/TemperCommands/Temper.swift",
+      "private/universal/domain/build/toolchains/temper/Sources/TemperExecutable/main.swift",
+      "private/universal/domain/build/toolchains/temper/Tests/TemperCommandsTests/TemperCommandsTests.swift"
+    ],
+    "reproduction": "git diff --cached --name-only --diff-filter=D -- private/universal/domain/build/toolchains/temper"
+  },
+  "submodule_reachability_evidence": "Canonical Temper commit c6f375a39a09b1e3139af8f62ea7ac275b424ef1 is reachable from origin/main at https://github.com/swift-universal/temper and is registered at private/product-lines/temper. The parent deletion candidate intentionally retains that gitlink until this evidence record is published.",
+  "other_worktrees_and_processes": "git worktree list reports only the main swift-universal worktree at C:/c/s/.git/modules/private/universal/substrate/collectives/swift-universal. The unrelated authorized Vaporize submodule worktree change is unstaged in the portal and excluded from this candidate tree.",
+  "untracked_build_residue": "The former directory contains ignored .build output and an untracked Package.resolved generated during verification. The canonical Temper repository has its own newer resolution output for its relocated manifest; neither file is tracked, and cleanup occurs only after the six tracked source deletions are committed and pushed.",
+  "recovery_ref": "refs/heads/safety/temper-pre-removal-2026-08-24 at 26227d51ff13ce0a68f4023e19ecdcdcc9fabc7d",
+  "authorization_reference": "In the active 2026-08-24 session, rismay explicitly instructed that Temper be moved to its proper repository now, fixed there afterward, and that the former copy be removed once the relocation was known-good.",
+  "retirement_reason": "Temper was extracted with history into its canonical standalone swift-universal product repository. Retaining the former source directory would leave two mutable copies and ambiguous ownership.",
+  "reviewer": "rismay",
+  "risk_classification": "yellow; deletion-only controlled repository migration with exact path review",
+  "decision": "proceed",
+  "recorded_at": "2026-08-24T14:54:03Z"
+}
