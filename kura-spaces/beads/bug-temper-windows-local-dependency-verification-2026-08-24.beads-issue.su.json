@@ -3,7 +3,7 @@
   "schemaVersion": "0.1.0",
   "id": "bug-temper-windows-local-dependency-verification-2026-08-24",
   "title": "Verify Temper Windows dependency modes after product relocation",
-  "status": "open",
+  "status": "closed",
   "priority": 1,
   "issueType": "bug",
   "labels": [
@@ -13,20 +13,25 @@
     "migration-verification"
   ],
   "createdAt": "2026-08-24",
+  "closedAt": "2026-08-24T15:03:12Z",
   "createdBy": "Codex with operator direction",
-  "description": "Temper was structurally relocated into its standalone swift-universal product repository before compatibility repair. Manifest parsing and dependency resolution reached the build stage, but the controlled swift-argument-parser checkout conflicts with temper-swift's remote identity and its GenerateDoccReference plugin does not compile under the current Windows Swift 6.4 toolchain.",
+  "description": "Temper was structurally relocated into its standalone swift-universal product repository before compatibility repair. Its original version requirement could not resolve because temper-swift had no release tag, and a one-sided local swift-argument-parser override created a duplicate package identity.",
+  "resolution": "Published the already portal-pinned Temper/Windows specialization commit c38471687fd5144345851931fe0960640d42ed58 to temper-swift main, changed Temper's unreleased specialization dependency to the published main branch, and removed the invalid one-sided local ArgumentParser override. Canonical Temper now builds and its three command-composition tests pass on Windows in default remote mode; local temper-swift mode also builds without duplicate identities.",
   "historicalContent": {
     "expectedBehavior": "Temper builds and tests on Windows from its canonical product repository in both default remote-dependency mode and an explicitly selected compatible local-dependency mode.",
     "currentEvidence": [
       "swift package dump-package succeeded from private/product-lines/temper.",
       "SwiftPM resolved the temper-swift dependency from its existing standalone checkout.",
       "The controlled swift-argument-parser checkout produced a duplicate package-identity warning against temper-swift's remote dependency.",
-      "GenerateDoccReference.swift failed because GeneratePlugin was unavailable and the @main type had no recognized main entry point under Swift 6.4 on Windows."
+      "GenerateDoccReference.swift failed because GeneratePlugin was unavailable and the @main type had no recognized main entry point under Swift 6.4 on Windows.",
+      "After removing the unsupported local ArgumentParser override, SPM_USE_LOCAL_DEPS=true built successfully against the portal-pinned temper-swift checkout.",
+      "After publishing temper-swift c384716 to main, default remote resolution pinned that revision and swift build completed successfully on Windows.",
+      "swift test completed successfully with three tests in the Temper command composition suite."
     ],
     "acceptanceCriteria": [
       "Run swift build and swift test successfully from the canonical Temper repository on Windows using the default dependency mode.",
       "Define one compatible controlled-local dependency graph without duplicate swift-argument-parser identities.",
-      "Repair or version-gate the controlled GenerateDoccReference plugin for the supported Windows Swift toolchain.",
+      "Remove the unsupported one-sided ArgumentParser override so the compatible published plugin graph is used on Windows.",
       "Save concise build and test evidence in the Temper product Kura space."
     ],
     "scopeBoundary": "Complete the repository relocation independently; perform dependency and toolchain compatibility changes only in the canonical Temper repository."

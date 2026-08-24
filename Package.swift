@@ -24,11 +24,6 @@ let temperSwiftPath = localPackagePath(
     environmentKey: "TEMPER_SWIFT_PATH",
     default: "../../universal/domain/build/toolchains/temper-swift"
 )
-let argumentParserPath = environment["TEMPER_ARGUMENT_PARSER_PATH"].map {
-    URL(fileURLWithPath: $0, relativeTo: packageDirectory)
-        .standardizedFileURL.path
-}
-
 let temperSwiftDependency: Package.Dependency =
     if useLocalDependencies,
        FileManager.default.fileExists(
@@ -39,20 +34,8 @@ let temperSwiftDependency: Package.Dependency =
     } else {
         .package(
             url: "https://github.com/swift-universal/temper-swift.git",
-            from: "0.1.0"
+            branch: "main"
         )
-    }
-
-let argumentParserDependency: Package.Dependency =
-    if useLocalDependencies,
-       let argumentParserPath,
-       FileManager.default.fileExists(
-           atPath: URL(fileURLWithPath: argumentParserPath)
-               .appendingPathComponent("Package.swift").path
-       ) {
-        .package(path: argumentParserPath)
-    } else {
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.3.0")
     }
 
 let package = Package(
@@ -66,7 +49,7 @@ let package = Package(
     ],
     dependencies: [
         temperSwiftDependency,
-        argumentParserDependency,
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.3.0"),
     ],
     targets: [
         .target(
