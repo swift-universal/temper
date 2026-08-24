@@ -1,0 +1,41 @@
+{
+  "BeadsIssue": "0.1.0",
+  "schemaVersion": "0.1.0",
+  "id": "docs-temper-product-support-and-engineering-2026-08-24",
+  "title": "Establish Temper product support and engineering documentation",
+  "status": "closed",
+  "priority": 1,
+  "issueType": "documentation",
+  "labels": [
+    "temper",
+    "docc",
+    "support",
+    "engineering",
+    "command-ownership"
+  ],
+  "createdAt": "2026-08-24",
+  "createdBy": "Codex with operator direction",
+  "closedAt": "2026-08-24T15:26:49Z",
+  "delivery": {
+    "result": "documented-and-verified",
+    "verification": [
+      "swift package dump-package succeeded on Windows.",
+      "Default published dependency mode passed all 3 Temper command-composition tests.",
+      "SPM_USE_LOCAL_DEPS=true passed all 3 tests against the canonical sibling temper-swift checkout.",
+      "git diff --check reported no whitespace errors."
+    ],
+    "knownWarning": "SwiftPM reports that no libarchive pkg-config file is installed on Windows; command composition still builds and passes, while platform archive behavior remains owned by temper-swift."
+  },
+  "description": "Temper is now a standalone product line but only its API symbol page describes the umbrella command. Add operator support and engineering references comparable to Vaporize, without introducing a README as a second documentation front door.",
+  "historicalContent": {
+    "acceptanceCriteria": [
+      "Add a support DocC bundle with getting-started, triage, and source-installed parity guidance.",
+      "Add an engineering DocC bundle with command ownership, dependency modes, and verification contract guidance.",
+      "Identify Temper as the owner of toolchain selection and Vaporize as a downstream consumer of the selected compiler.",
+      "Verify both published and controlled-local SwiftPM dependency modes on Windows.",
+      "Commit and push the documentation from the canonical Temper repository on main."
+    ],
+    "scopeBoundary": "Document the current product and ownership model; do not expand Temper's executable command surface in this change."
+  },
+  "sourceLocation": "temper.support.docc/index.md"
+}
