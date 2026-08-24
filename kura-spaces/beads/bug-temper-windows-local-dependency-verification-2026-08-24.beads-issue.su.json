@@ -1,0 +1,35 @@
+{
+  "BeadsIssue": "0.1.0",
+  "schemaVersion": "0.1.0",
+  "id": "bug-temper-windows-local-dependency-verification-2026-08-24",
+  "title": "Verify Temper Windows dependency modes after product relocation",
+  "status": "open",
+  "priority": 1,
+  "issueType": "bug",
+  "labels": [
+    "temper",
+    "windows",
+    "swiftpm",
+    "migration-verification"
+  ],
+  "createdAt": "2026-08-24",
+  "createdBy": "Codex with operator direction",
+  "description": "Temper was structurally relocated into its standalone swift-universal product repository before compatibility repair. Manifest parsing and dependency resolution reached the build stage, but the controlled swift-argument-parser checkout conflicts with temper-swift's remote identity and its GenerateDoccReference plugin does not compile under the current Windows Swift 6.4 toolchain.",
+  "historicalContent": {
+    "expectedBehavior": "Temper builds and tests on Windows from its canonical product repository in both default remote-dependency mode and an explicitly selected compatible local-dependency mode.",
+    "currentEvidence": [
+      "swift package dump-package succeeded from private/product-lines/temper.",
+      "SwiftPM resolved the temper-swift dependency from its existing standalone checkout.",
+      "The controlled swift-argument-parser checkout produced a duplicate package-identity warning against temper-swift's remote dependency.",
+      "GenerateDoccReference.swift failed because GeneratePlugin was unavailable and the @main type had no recognized main entry point under Swift 6.4 on Windows."
+    ],
+    "acceptanceCriteria": [
+      "Run swift build and swift test successfully from the canonical Temper repository on Windows using the default dependency mode.",
+      "Define one compatible controlled-local dependency graph without duplicate swift-argument-parser identities.",
+      "Repair or version-gate the controlled GenerateDoccReference plugin for the supported Windows Swift toolchain.",
+      "Save concise build and test evidence in the Temper product Kura space."
+    ],
+    "scopeBoundary": "Complete the repository relocation independently; perform dependency and toolchain compatibility changes only in the canonical Temper repository."
+  },
+  "sourceLocation": "Package.swift"
+}
