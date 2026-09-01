@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "0.8.0",
+  "WorkflowInstanceModel": "0.8.0",
+  "kind": "workflow-instance",
+  "slug": "software-modification-workstream-capture-2026-08-31-canonical-cli-product",
+  "title": "Software modification - Temper canonical CLI product",
+  "updated": "2026-09-01T06:08:00Z",
+  "workflowRef": {
+    "LinkRefModel": "0.5.0",
+    "sv": "0.5.0",
+    "t": "Software modification workstream capture",
+    "tg": [{"k": "rp", "rt": "mono", "v": "private/universal/substrate/collectives/spaces-universal/private/universal/kura-spaces/workflows/software-modification-workstream-capture/v0.1.0/software-modification-workstream-capture.workflow.su.json"}]
+  },
+  "beadTrackingRefs": [
+    {
+      "LinkRefModel": "0.5.0",
+      "sv": "0.5.0",
+      "t": "Temper canonical CLI product",
+      "tg": [{"k": "rp", "rt": "repo", "v": "kura-spaces/beads/bug-temper-canonical-cli-product-2026-08-31.beads-issue.su.json"}]
+    }
+  ],
+  "receiptRefs": [
+    {
+      "LinkRefModel": "0.5.0",
+      "sv": "0.5.0",
+      "t": "International Law release baseline",
+      "tg": [{"k": "rp", "rt": "repo", "v": "kura-spaces/international-law-baselines/temper.cli@swift-universal.clia.sh.release.international-law-baseline.json"}]
+    }
+  ],
+  "stateResults": [
+    {
+      "schemaVersion": "0.1.0",
+      "WorkflowInstanceStateResultModel": "0.1.0",
+      "kind": "workflow-instance-state-result",
+      "stateId": "canonicalize-product",
+      "outcome": "completed",
+      "summary": "The SwiftPM executable product and source-run documentation now use the canonical advanced CLI identity."
+    },
+    {
+      "schemaVersion": "0.1.0",
+      "WorkflowInstanceStateResultModel": "0.1.0",
+      "kind": "workflow-instance-state-result",
+      "stateId": "build-and-install",
+      "outcome": "completed-on-windows",
+      "summary": "Vaporize built the release product, used its Windows experimental-install fallback, installed the executable in the SwiftPM bin directory, and verified it. International Law held two frozen findings with zero new findings."
+    }
+  ]
+}

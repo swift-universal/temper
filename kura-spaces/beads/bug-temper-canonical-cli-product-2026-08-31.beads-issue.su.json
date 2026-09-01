@@ -1,0 +1,19 @@
+{
+  "BeadsIssue": "0.1.0",
+  "schemaVersion": "0.1.0",
+  "id": "bug-temper-canonical-cli-product-2026-08-31",
+  "title": "Publish Temper with its canonical CLI product identity",
+  "createdAt": "2026-09-01T06:08:00Z",
+  "createdBy": "Codex with operator authorization",
+  "issueType": "bug",
+  "status": "closed",
+  "priority": 1,
+  "labels": ["temper", "vaporize", "windows", "cli", "release"],
+  "description": "Temper declared the generic SwiftPM executable product `temper`, so Vaporize correctly rejected it at the production build boundary. Rename the product to the canonical advanced CLI identity, update source-run documentation, and preserve the existing i18n findings as a ratcheted baseline with generated remediation records.",
+  "acceptanceCriteria": [
+    "Package.swift declares `temper.cli@swift-universal.clia.sh` as the executable product.",
+    "Source-run documentation uses the canonical product name.",
+    "Vaporize builds, installs, and verifies the canonical executable on Windows.",
+    "Existing i18n findings are represented by generated beads, bindings, evidence, receipts, and a baseline that still rejects new drift."
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "approvedImports" : [
+
+  ],
+  "declaredKeys" : [
+
+  ],
+  "enforcement" : "release",
+  "findings" : [
+    {
+      "location" : {
+        "column" : 19,
+        "file" : "Sources/TemperCommands/Temper.swift",
+        "line" : 9
+      },
+      "message" : "Target 'temper.cli@swift-universal.clia.sh' uses user-facing strings but has no approved i18n copy-package receipt.",
+      "rule" : "I18N001",
+      "sink" : "target-import",
+      "structuralAnchor" : "target-import"
+    },
+    {
+      "containsInterpolation" : false,
+      "literalSource" : "\"Select and manage development toolchains.\"",
+      "literalValue" : "Select and manage development toolchains.",
+      "location" : {
+        "column" : 19,
+        "file" : "Sources/TemperCommands/Temper.swift",
+        "line" : 9
+      },
+      "message" : "User-facing string literal must come from an approved generated i18n copy package.",
+      "rule" : "I18N002",
+      "sink" : "ArgumentParser.CommandConfiguration.abstract",
+      "structuralAnchor" : "sha256:b1c8ac3da85563d3d6b6254ba96bf7a0e065a48af168b6c79cc53280008aa429"
+    }
+  ],
+  "formatVersion" : "0.3.0",
+  "heuristics" : [
+    {
+      "autofixPolicy" : "none",
+      "category" : "adoption",
+      "description" : "User-facing copy crosses the target boundary without an approved generated-package passport.",
+      "enforcementStatus" : "enforced",
+      "name" : "Missing Passport",
+      "rule" : "I18N001"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "adoption",
+      "description" : "User-facing prose has escaped the typed catalog and is authored loose in product source.",
+      "enforcementStatus" : "enforced",
+      "name" : "Loose Copy",
+      "rule" : "I18N002"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "provenance",
+      "description" : "Product code takes a localization side door around the approved generated accessor boundary.",
+      "enforcementStatus" : "enforced",
+      "name" : "Side Door",
+      "rule" : "I18N003"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "adoption",
+      "description" : "An approved import dresses the target as adopted while none of its generated accessors are used.",
+      "enforcementStatus" : "enforced",
+      "name" : "Costume Import",
+      "rule" : "I18N004"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "release-hygiene",
+      "description" : "Development-only vapor has leaked across the release boundary.",
+      "enforcementStatus" : "enforced",
+      "name" : "Vapor Leak",
+      "rule" : "I18N005"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "provenance",
+      "description" : "A generated accessor appears without a reproducible dependency on its owning module.",
+      "enforcementStatus" : "enforced",
+      "name" : "Ghost Dependency",
+      "rule" : "I18N006"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "declaration-integrity",
+      "description" : "An approved declaration has no live generated-accessor sink in the scanned target.",
+      "enforcementStatus" : "enforced",
+      "name" : "Orphaned Declaration",
+      "rule" : "I18N007"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "provenance",
+      "description" : "A copy-shaped module presents no approved publication receipt proving its identity.",
+      "enforcementStatus" : "enforced",
+      "name" : "Counterfeit Package",
+      "rule" : "I18N008"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "generated-code-integrity",
+      "description" : "The generated accessor index cannot account for every declared canonical key exactly once.",
+      "enforcementStatus" : "enforced",
+      "name" : "Broken Index",
+      "rule" : "I18N009"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "declaration-integrity",
+      "description" : "Multiple imported packages contest ownership of the same canonical key.",
+      "enforcementStatus" : "enforced",
+      "name" : "Key Turf War",
+      "rule" : "I18N010"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "declaration-integrity",
+      "description" : "A live generated accessor resolves to a key missing from imported publication declarations.",
+      "enforcementStatus" : "enforced",
+      "name" : "Undocumented Use",
+      "rule" : "I18N011"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "provenance",
+      "description" : "One imported module answers to multiple approved receipts, splitting publication authority.",
+      "enforcementStatus" : "enforced",
+      "name" : "Split Authority",
+      "rule" : "I18N012"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "generated-code-integrity",
+      "description" : "Multiple generated accessor aliases lead to the same canonical key.",
+      "enforcementStatus" : "enforced",
+      "name" : "Alias Maze",
+      "rule" : "I18N013"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "declaration-integrity",
+      "description" : "One publication receipt counts the same canonical key more than once.",
+      "enforcementStatus" : "enforced",
+      "name" : "Double Entry",
+      "rule" : "I18N014"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "locale-integrity",
+      "description" : "A declared locale shard looks complete but cannot materialize every canonical catalog record into target resources.",
+      "enforcementStatus" : "enforced",
+      "name" : "Translation Mirage",
+      "rule" : "I18N015"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "locale-integrity",
+      "description" : "A translation changes, drops, duplicates, or retags formatting placeholders at the locale boundary.",
+      "enforcementStatus" : "enforced",
+      "name" : "Placeholder Smuggling",
+      "rule" : "I18N016"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "runtime-coverage",
+      "description" : "A locale silently resolves through source-language fallback instead of proving a localized artifact.",
+      "enforcementStatus" : "enforced",
+      "name" : "Fallback Fog",
+      "rule" : "I18N017"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "runtime-coverage",
+      "description" : "A published locale exists in inventory but no declared product route can reach it.",
+      "enforcementStatus" : "needs-contract",
+      "name" : "Dead Tongue",
+      "rule" : "I18N018"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "generated-code-integrity",
+      "coveredBy" : "I18N009",
+      "description" : "A canonical key and its generated accessor diverge from the product's declared key-shape grammar.",
+      "enforcementStatus" : "covered-by-existing-law",
+      "name" : "Key Shape Drift",
+      "rule" : "I18N019"
+    },
+    {
+      "autofixPolicy" : "none",
+      "category" : "semantic-context",
+      "description" : "Distinct meanings are forced through one key without typed context evidence proving that the reuse is intentional.",
+      "enforcementStatus" : "needs-contract",
+      "name" : "Context Collapse",
+      "rule" : "I18N020"
+    }
+  ],
+  "imports" : [
+    "ArgumentParser",
+    "TemperCommands",
+    "TemperSwiftCommands"
+  ],
+  "lawbook" : {
+    "name" : "i18n Lint Lawbook",
+    "nickname" : "International Law"
+  },
+  "localeCoverage" : [
+
+  ],
+  "passed" : false,
+  "placeholders" : [
+
+  ],
+  "scannedFileCount" : 2,
+  "scannedFiles" : [
+    "Sources/TemperCommands/Temper.swift",
+    "Sources/TemperExecutable/main.swift"
+  ],
+  "standard" : {
+    "canonicalRef" : "private/universal/substrate/collectives/i18n-universal/private/universal/contracts/enforce-i18n-source-consumption.contract.md",
+    "owner" : "i18n-universal",
+    "slug" : "i18n-source-consumption-enforcement",
+    "title" : "i18n Source Consumption Enforcement",
+    "version" : "0.1.0"
+  },
+  "surfaceKind" : "cli",
+  "targetName" : "temper.cli@swift-universal.clia.sh",
+  "usedKeys" : [
+
+  ]
+}

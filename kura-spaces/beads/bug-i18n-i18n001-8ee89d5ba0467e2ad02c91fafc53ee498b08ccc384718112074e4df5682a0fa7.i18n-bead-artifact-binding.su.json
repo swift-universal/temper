@@ -1,0 +1,31 @@
+{
+  "cartridge" : {
+    "compatibilityVersion" : "0.2.0",
+    "id" : "i18n-source-gate-bead-artifact",
+    "temporalCoordinate" : "2.2608.24160"
+  },
+  "commitScope" : [
+    "private/universal/substrate/collectives/swift-universal/private/product-lines/temper/Package.swift",
+    "private/universal/substrate/collectives/swift-universal/private/product-lines/temper/Sources/TemperCommands/Temper.swift",
+    "private/universal/substrate/collectives/swift-universal/private/product-lines/temper/Sources/TemperExecutable/main.swift"
+  ],
+  "issueId" : "bug-i18n-i18n001-8ee89d5ba0467e2ad02c91fafc53ee498b08ccc384718112074e4df5682a0fa7",
+  "kind" : "i18n-bead-artifact-binding",
+  "parentEpicId" : "EPIC-I18N-SOURCE-CONSUMPTION-ENFORCEMENT-ADOPTION-2026-07-18",
+  "policyRef" : "private/universal/substrate/collectives/i18n-universal/private/universal/contracts/enforce-i18n-source-consumption.contract.md",
+  "reportReceiptRef" : "private/universal/substrate/collectives/swift-universal/private/product-lines/temper/kura-spaces/beads/receipts/i18n-source-gate/bug-i18n-i18n001-8ee89d5ba0467e2ad02c91fafc53ee498b08ccc384718112074e4df5682a0fa7.source-gate-report.json",
+  "reportReceiptSHA256" : "a1f0efa699bb36212edd49bf4419b3f003b465ef181c15d4e3dea88673a1a7c9",
+  "schemaVersion" : "0.2.0",
+  "target" : {
+    "coordinate" : "target-import",
+    "state" : "target-resolved"
+  },
+  "verifier" : "translate.cli@i18n-universal.clia.sh gate swift-source --source-root Sources/TemperCommands/Temper.swift --source-root Sources/TemperExecutable/main.swift --catalog-root ../../../../i18n-universal/private/universal/domain/catalogs/spm --repair-home . --target temper.cli@swift-universal.clia.sh --surface cli --enforcement release --beads write --owning-home kura-spaces --owner-id private/universal/substrate/collectives/swift-universal/private/product-lines/temper/kura-spaces --only-bead bug-i18n-i18n001-8ee89d5ba0467e2ad02c91fafc53ee498b08ccc384718112074e4df5682a0fa7 --scan-completeness complete --receipt kura-spaces/beads/receipts/i18n-source-gate/bug-i18n-i18n001-8ee89d5ba0467e2ad02c91fafc53ee498b08ccc384718112074e4df5682a0fa7.source-gate-report.json --bead-receipt kura-spaces/beads/receipts/i18n-source-gate/bug-i18n-i18n001-8ee89d5ba0467e2ad02c91fafc53ee498b08ccc384718112074e4df5682a0fa7.source-gate-report.bead-reconciliation.json",
+  "workPoem" : {
+    "boundary" : "private/universal/substrate/collectives/swift-universal/private/product-lines/temper",
+    "meaning" : "Without the approved package, product copy has no catalog-owned, localizable source of truth. The finding blocks the release boundary. Completion owner: i18n-universal catalog owner, then the consumer owner. Workflow: private/universal/substrate/collectives/spaces-universal/private/universal/kura-spaces/workflows/i18n-active-copy-lifecycle/v0.1.0/i18n-active-copy-lifecycle.workflow.su.json",
+    "move" : "translate.cli@i18n-universal.clia.sh gate swift-source --source-root Sources/TemperCommands/Temper.swift --source-root Sources/TemperExecutable/main.swift --catalog-root ../../../../i18n-universal/private/universal/domain/catalogs/spm --repair-home . --target temper.cli@swift-universal.clia.sh --surface cli --enforcement release --beads write --owning-home kura-spaces --owner-id private/universal/substrate/collectives/swift-universal/private/product-lines/temper/kura-spaces --only-bead bug-i18n-i18n001-8ee89d5ba0467e2ad02c91fafc53ee498b08ccc384718112074e4df5682a0fa7 --scan-completeness complete --receipt kura-spaces/beads/receipts/i18n-source-gate/bug-i18n-i18n001-8ee89d5ba0467e2ad02c91fafc53ee498b08ccc384718112074e4df5682a0fa7.source-gate-report.json --bead-receipt kura-spaces/beads/receipts/i18n-source-gate/bug-i18n-i18n001-8ee89d5ba0467e2ad02c91fafc53ee498b08ccc384718112074e4df5682a0fa7.source-gate-report.bead-reconciliation.json",
+    "proof" : "translate.cli@i18n-universal.clia.sh gate swift-source --source-root Sources/TemperCommands/Temper.swift --source-root Sources/TemperExecutable/main.swift --catalog-root ../../../../i18n-universal/private/universal/domain/catalogs/spm --repair-home . --target temper.cli@swift-universal.clia.sh --surface cli --enforcement release --beads write --owning-home kura-spaces --owner-id private/universal/substrate/collectives/swift-universal/private/product-lines/temper/kura-spaces --only-bead bug-i18n-i18n001-8ee89d5ba0467e2ad02c91fafc53ee498b08ccc384718112074e4df5682a0fa7 --scan-completeness complete --receipt kura-spaces/beads/receipts/i18n-source-gate/bug-i18n-i18n001-8ee89d5ba0467e2ad02c91fafc53ee498b08ccc384718112074e4df5682a0fa7.source-gate-report.json --bead-receipt kura-spaces/beads/receipts/i18n-source-gate/bug-i18n-i18n001-8ee89d5ba0467e2ad02c91fafc53ee498b08ccc384718112074e4df5682a0fa7.source-gate-report.bead-reconciliation.json",
+    "world" : "Wire the approved copy-package product into the target, import it, and route each user-facing sink through its generated accessor. Completion route (i18n-provisioning): An approved generated copy package publishes the exact declared keys, then the consumer wires that package and removes the reported source violation. Target temper.cli@swift-universal.clia.sh at target-import."
+  }
+}

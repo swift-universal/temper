@@ -1,0 +1,22 @@
+{
+  "binding" : {
+    "enforcement" : "release",
+    "surfaceKind" : "cli",
+    "targetName" : "temper.cli@swift-universal.clia.sh"
+  },
+  "entries" : [
+    {
+      "rule" : "I18N001",
+      "structuralAnchor" : "target-import"
+    },
+    {
+      "rule" : "I18N002",
+      "structuralAnchor" : "sha256:b1c8ac3da85563d3d6b6254ba96bf7a0e065a48af168b6c79cc53280008aa429"
+    }
+  ],
+  "formatVersion" : "0.1.0",
+  "scannedFiles" : [
+    "Sources/TemperCommands/Temper.swift",
+    "Sources/TemperExecutable/main.swift"
+  ]
+}

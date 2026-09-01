@@ -45,7 +45,10 @@ let package = Package(
     ],
     products: [
         .library(name: "TemperCommands", targets: ["TemperCommands"]),
-        .executable(name: "temper", targets: ["TemperExecutable"]),
+        .executable(
+            name: "temper.cli@swift-universal.clia.sh",
+            targets: ["TemperExecutable"]
+        ),
     ],
     dependencies: [
         temperSwiftDependency,

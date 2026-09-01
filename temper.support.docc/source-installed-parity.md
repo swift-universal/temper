@@ -12,8 +12,7 @@ Verify a source checkout with:
 ```sh
 swift build
 swift test
-swift run temper --help
+swift run temper.cli@swift-universal.clia.sh --help
 ```
 
 After installing a release, repeat the help checks with the installed `temper` executable. A mismatch means the installed artifact is stale or came from a different revision; it does not justify adding a compatibility command to the source product.
-

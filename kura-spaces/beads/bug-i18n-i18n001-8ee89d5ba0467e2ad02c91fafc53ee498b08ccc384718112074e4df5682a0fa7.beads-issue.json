@@ -1,0 +1,38 @@
+{
+  "acceptanceCriteria" : "- Wire the approved copy-package product into the target, import it, and route each user-facing sink through its generated accessor.\n- Change only the owning Package.swift dependency wiring and the affected target sources named by the spawn cast.\n- Rerun the exact complete source-gate verifier from the Bead spawn cast. Only authoritative complete absence permits automatic closure.\n- An approved generated copy package publishes the exact declared keys, then the consumer wires that package and removes the reported source violation.\n- Rerun the exact complete source-gate verifier from the Bead spawn cast. Only authoritative complete absence permits automatic closure.\n- The structural law break no longer appears at this source coordinate.\n- The canonical Bead, detector evidence, spawn cast, and strict Bead World projection remain decodable.",
+  "createdAt" : "2026-09-01T05:37:55Z",
+  "createdBy" : "translate-source-gate",
+  "dependencies" : [
+    {
+      "createdAt" : "2026-09-01T05:37:55Z",
+      "createdBy" : "translate-source-gate",
+      "dependsOnId" : "EPIC-I18N-SOURCE-CONSUMPTION-ENFORCEMENT-ADOPTION-2026-07-18",
+      "issueId" : "bug-i18n-i18n001-8ee89d5ba0467e2ad02c91fafc53ee498b08ccc384718112074e4df5682a0fa7",
+      "type" : "parent-child"
+    }
+  ],
+  "description" : "What happened: Target 'temper.cli@swift-universal.clia.sh' uses user-facing strings but has no approved i18n copy-package receipt.\n\nWhy it matters: Without the approved package, product copy has no catalog-owned, localizable source of truth.\n\nNext move: Wire the approved copy-package product into the target, import it, and route each user-facing sink through its generated accessor.\n\nBoundary: Change only the owning Package.swift dependency wiring and the affected target sources named by the spawn cast.\n\nCompletion route: i18n-provisioning — An approved generated copy package publishes the exact declared keys, then the consumer wires that package and removes the reported source violation.\n\nCompletion owner: i18n-universal catalog owner, then the consumer owner\n\nCompletion workflow: private/universal/substrate/collectives/spaces-universal/private/universal/kura-spaces/workflows/i18n-active-copy-lifecycle/v0.1.0/i18n-active-copy-lifecycle.workflow.su.json\n\nCompletion evidence: Rerun the exact complete source-gate verifier from the Bead spawn cast. Only authoritative complete absence permits automatic closure.\n\nIdentity: translate-source-gate observed I18N001 at the stable source coordinate target-import. Diagnostic line, column, message, visibility, and time are evidence, not identity.",
+  "externalRef" : "private/universal/substrate/collectives/swift-universal/private/product-lines/temper/kura-spaces/beads/bug-i18n-i18n001-8ee89d5ba0467e2ad02c91fafc53ee498b08ccc384718112074e4df5682a0fa7.i18n-bead-artifact-binding.su.json",
+  "firstObservedAt" : "2026-09-01T05:37:55Z",
+  "id" : "bug-i18n-i18n001-8ee89d5ba0467e2ad02c91fafc53ee498b08ccc384718112074e4df5682a0fa7",
+  "issueType" : "bug",
+  "labels" : [
+    "bug",
+    "detector-authored",
+    "i18n-universal",
+    "i18n-source-consumption-enforcement",
+    "i18n001",
+    "spawn-ready"
+  ],
+  "lastObservedAt" : "2026-09-01T05:53:44Z",
+  "observationCount" : 3,
+  "owner" : "private/universal/substrate/collectives/swift-universal/private/product-lines/temper/kura-spaces",
+  "priority" : 2,
+  "recurrenceCount" : 0,
+  "sourceLocation" : "private/universal/substrate/collectives/swift-universal/private/product-lines/temper/kura-spaces/beads/bug-i18n-i18n001-8ee89d5ba0467e2ad02c91fafc53ee498b08ccc384718112074e4df5682a0fa7.i18n-source-gate-evidence.json",
+  "sourceSystem" : "translate-source-gate",
+  "sourceType" : "i18n-source-gate-finding",
+  "status" : "open",
+  "title" : "Resolve I18N001 at target-import",
+  "updatedAt" : "2026-09-01T05:53:44Z"
+}

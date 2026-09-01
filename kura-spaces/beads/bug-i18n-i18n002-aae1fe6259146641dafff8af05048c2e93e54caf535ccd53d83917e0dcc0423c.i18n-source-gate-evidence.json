@@ -1,0 +1,82 @@
+{
+  "beadWorldProjectionRef" : "private/universal/substrate/collectives/swift-universal/private/product-lines/temper/kura-spaces/beads/bug-i18n-i18n002-aae1fe6259146641dafff8af05048c2e93e54caf535ccd53d83917e0dcc0423c.i18n-bead-artifact-binding.su.json",
+  "detectorEvidence" : {
+    "column" : 19,
+    "detector" : {
+      "detectorID" : "translate-source-gate",
+      "implementation" : "TranslateSourceGate",
+      "implementationVersion" : "0.3.0"
+    },
+    "enforcement" : "release",
+    "findingScanScope" : [
+      "Sources/TemperCommands/Temper.swift",
+      "Sources/TemperExecutable/main.swift"
+    ],
+    "line" : 9,
+    "message" : "User-facing string literal must come from an approved generated i18n copy package.",
+    "ownerID" : "private/universal/substrate/collectives/swift-universal/private/product-lines/temper/kura-spaces",
+    "reportFormatVersion" : "0.3.0",
+    "reportReceiptRef" : "private/universal/substrate/collectives/swift-universal/private/product-lines/temper/kura-spaces/beads/receipts/i18n-source-gate/bug-i18n-i18n002-aae1fe6259146641dafff8af05048c2e93e54caf535ccd53d83917e0dcc0423c.source-gate-report.json",
+    "reportReceiptSHA256" : "a1f0efa699bb36212edd49bf4419b3f003b465ef181c15d4e3dea88673a1a7c9",
+    "rule" : "I18N002",
+    "sink" : "ArgumentParser.CommandConfiguration.abstract",
+    "sourceCoordinate" : "Sources/TemperCommands/Temper.swift",
+    "standardRef" : "private/universal/substrate/collectives/i18n-universal/private/universal/contracts/enforce-i18n-source-consumption.contract.md",
+    "standardSlug" : "i18n-source-consumption-enforcement",
+    "standardVersion" : "0.1.0",
+    "structuralAnchor" : "sha256:b1c8ac3da85563d3d6b6254ba96bf7a0e065a48af168b6c79cc53280008aa429",
+    "surfaceKind" : "cli",
+    "targetName" : "temper.cli@swift-universal.clia.sh"
+  },
+  "evidenceRefs" : [
+    "private/universal/substrate/collectives/i18n-universal/private/universal/contracts/enforce-i18n-source-consumption.contract.md",
+    "Sources/TemperCommands/Temper.swift",
+    "private/universal/substrate/collectives/swift-universal/private/product-lines/temper/kura-spaces/beads/bug-i18n-i18n002-aae1fe6259146641dafff8af05048c2e93e54caf535ccd53d83917e0dcc0423c.i18n-bead-artifact-binding.su.json",
+    "private/universal/substrate/collectives/swift-universal/private/product-lines/temper/kura-spaces/beads/receipts/i18n-source-gate/bug-i18n-i18n002-aae1fe6259146641dafff8af05048c2e93e54caf535ccd53d83917e0dcc0423c.source-gate-report.json",
+    "sha256:a1f0efa699bb36212edd49bf4419b3f003b465ef181c15d4e3dea88673a1a7c9"
+  ],
+  "issueId" : "bug-i18n-i18n002-aae1fe6259146641dafff8af05048c2e93e54caf535ccd53d83917e0dcc0423c",
+  "kind" : "i18n-source-gate-bead-evidence",
+  "observationState" : "present",
+  "parentEpicId" : "EPIC-I18N-SOURCE-CONSUMPTION-ENFORCEMENT-ADOPTION-2026-07-18",
+  "schemaVersion" : "0.2.0",
+  "spawnCastRef" : "private/universal/substrate/collectives/swift-universal/private/product-lines/temper/kura-spaces/beads/bug-i18n-i18n002-aae1fe6259146641dafff8af05048c2e93e54caf535ccd53d83917e0dcc0423c.i18n-bead-artifact-binding.su.json",
+  "worldline" : [
+    {
+      "action" : "create",
+      "reportReceiptRef" : "private/universal/substrate/collectives/swift-universal/private/product-lines/temper/kura-spaces/beads/receipts/i18n-source-gate/bug-i18n-i18n002-aae1fe6259146641dafff8af05048c2e93e54caf535ccd53d83917e0dcc0423c.source-gate-report.json",
+      "reportReceiptSHA256" : "a1f0efa699bb36212edd49bf4419b3f003b465ef181c15d4e3dea88673a1a7c9",
+      "rule" : "I18N002",
+      "scanScope" : [
+        "Sources/TemperCommands/Temper.swift",
+        "Sources/TemperExecutable/main.swift"
+      ],
+      "sourceCoordinate" : "Sources/TemperCommands/Temper.swift",
+      "timestamp" : "2026-09-01T05:37:55Z"
+    },
+    {
+      "action" : "observe",
+      "reportReceiptRef" : "private/universal/substrate/collectives/swift-universal/private/product-lines/temper/kura-spaces/beads/receipts/i18n-source-gate/bug-i18n-i18n002-aae1fe6259146641dafff8af05048c2e93e54caf535ccd53d83917e0dcc0423c.source-gate-report.json",
+      "reportReceiptSHA256" : "a1f0efa699bb36212edd49bf4419b3f003b465ef181c15d4e3dea88673a1a7c9",
+      "rule" : "I18N002",
+      "scanScope" : [
+        "Sources/TemperCommands/Temper.swift",
+        "Sources/TemperExecutable/main.swift"
+      ],
+      "sourceCoordinate" : "Sources/TemperCommands/Temper.swift",
+      "timestamp" : "2026-09-01T05:39:03Z"
+    },
+    {
+      "action" : "observe",
+      "reportReceiptRef" : "private/universal/substrate/collectives/swift-universal/private/product-lines/temper/kura-spaces/beads/receipts/i18n-source-gate/bug-i18n-i18n002-aae1fe6259146641dafff8af05048c2e93e54caf535ccd53d83917e0dcc0423c.source-gate-report.json",
+      "reportReceiptSHA256" : "a1f0efa699bb36212edd49bf4419b3f003b465ef181c15d4e3dea88673a1a7c9",
+      "rule" : "I18N002",
+      "scanScope" : [
+        "Sources/TemperCommands/Temper.swift",
+        "Sources/TemperExecutable/main.swift"
+      ],
+      "sourceCoordinate" : "Sources/TemperCommands/Temper.swift",
+      "timestamp" : "2026-09-01T05:53:44Z"
+    }
+  ]
+}
